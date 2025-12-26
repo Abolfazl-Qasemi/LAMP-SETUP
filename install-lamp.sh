@@ -21,6 +21,7 @@ if [[ "$warningAllert" == "Y" ]]; then
         fi
 
     done 
+    sudo systemctl restart apache2
     for package in "${allPackages[@]}"; do
 
         if [[ "$(dpkg -s $package | grep "Status" | cut -d ':' -f2)" != " install ok installed" ]]; then
