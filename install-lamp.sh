@@ -8,21 +8,27 @@ echo "This program install Apache , MariaDB-server and PHP, along with all confi
 read -p "Do you want to continue? [Y/n] " warningAllert
 if [[ "$warningAllert" == "Y" ]]; then
     sleep 4
-    echo "start process packages will installe"
+    echo "Start process packages will installe "
     for package in "${allPackages[@]}"; do
         echo "---------------------------------------------------------"
         #package installed or not
         if [[ "$(dpkg -s $package | grep "Status" | cut -d ':' -f2)" != " install ok installed" ]]; then 
-            sudo apt install $package -y &> 
-
+            sudo apt install $package -y
         else
-            echo $package" is installed before"
+            echo -e "\e[36m$package is installed before\e[0m"
             beforeInstalled+=$package
             echo "$beforeInstalled"
         fi
 
     done 
-    echo "$beforeInstalled"
+    for package in "${allPackages[@]}"; do
+
+        if [[ "$(dpkg -s $package | grep "Status" | cut -d ':' -f2)" != " install ok installed" ]]; then
+                    echo -e "\e[31mERROR: $package package dose not install\e[0m"
+        else
+                    echo -e "\e[32m$package package installed\e[0m"
+        fi
+    done
     
 else
     echo "good bye !"
