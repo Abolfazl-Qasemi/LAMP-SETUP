@@ -32,7 +32,7 @@ if [[ "$warningAllert" == "Y" ]]; then
     done
     
 else
-    echo "good bye !"
+    echo "Bye"
 fi
 
 
