@@ -26,7 +26,7 @@ if [[ "$warningAllert" == "Y" ]]; then
     fi
     sudo systemctl restart apache2
 else
-    echo "good bye !"
+    echo "Bye"
 fi
 
 
