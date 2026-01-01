@@ -21,7 +21,7 @@ if [[ "$warningAllert" == "Y" ]]; then
     #creat info.php file
     if [[ ! -e "/var/www/html/info.php" ]]; then
         #print code -> than write to info.php -> at the end paste to null for clean terminal 
-        echo "<?php \nphpinfo();\n?>" | sudo tee /var/www/html/info.php > /dev/null 
+        echo "<?php \nphpinfo(); \n?>" | sudo tee /var/www/html/info.php > /dev/null 
         
     fi
     sudo systemctl restart apache2

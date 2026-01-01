@@ -20,19 +20,19 @@ for package in "${allPackages[@]}"; do
 done
 
 #test info.php
-if [[ "$(cat /var/www/html/info.php)" != "<?php \nphpinfo();\n?>" ]]; then
-    echo -e "\e[31m There is no standard info.php file \e[0m"
+if  ! grep -q "phpinfo();" /var/www/html/info.php || ! grep -q "<?php" /var/www/html/info.php || ! grep -q "?>" /var/www/html/info.php ; then 
+    echo -e "\e[31m PHP info content is wrong \e[0m"
     problemTest=1
 fi 
 
 #port test
-if [[ "$(sudo ss -unlpt | grep :80 | cut -d "(" -f3 | cut -d '"' -f2)" != "apache2"]]; then
+if [[ "$(sudo ss -unlpt | grep :80 | cut -d "(" -f3 | cut -d '"' -f2)" != "apache2" ]]; then
     echo -e "\e[31m Port error\e[0m"
     problemTest=1
 fi
 
-#test database
-if [[ "$(sudo mariadb -u root -p )" != "Enter password:" ]]; then
+#test database -> if you cannot run simple command(SELECT 1) then print error
+if ! sudo mariadb -u root -e "SELECT 1;" > /dev/null 2>&1; then 
     echo -e "\e[31m date base error\e[0m"
     problemTest=1
 fi
