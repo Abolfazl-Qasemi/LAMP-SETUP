@@ -9,7 +9,7 @@ read -p "Do you want to continue? [Y/n] " warningAllert
 if [[ "$warningAllert" == "Y" ]]; then
     sleep 4
     sudo apt update 
-    echo "Start process "
+    echo "Start process..."
     for package in "${allPackages[@]}"; do
         echo "----------------------------------------------------"
         #package installed or not
