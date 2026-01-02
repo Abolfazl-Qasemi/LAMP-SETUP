@@ -14,7 +14,7 @@ case "$menuInput" in
     source LAMP-setup/test-lamp.sh
     ;;
     2) 
-    source LAMP-setup/remov-lamp.sh
+    source LAMP-setup/remove-lamp.sh
     ;;
     3) 
     source LAMP-setup/test-lamp.sh
