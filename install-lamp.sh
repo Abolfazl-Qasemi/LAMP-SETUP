@@ -8,8 +8,9 @@ echo "This program install Apache , MariaDB-server and PHP, along with all confi
 read -p "Do you want to continue? [Y/n] " warningAllert
 if [[ "$warningAllert" == "Y" ]]; then
     sleep 4
-    sudo apt update 
     echo "Start process..."
+    sudo apt update 
+    
     for package in "${allPackages[@]}"; do
         echo "----------------------------------------------------"
         #package installed or not

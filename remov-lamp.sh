@@ -15,7 +15,7 @@ if [[ "$warningAllert" == "Y" ]]; then
         echo "---------------------------------------------------------"
         #package installed or not
         if [[ "$(dpkg -s $package | grep "Status" | cut -d ':' -f2)" == " install ok installed" ]]; then 
-            echo $package" will removed"
+            echo $package" will remov"
             sudo apt purge $package -y
         else
             echo $package" is not installed so we skiped"
