@@ -8,8 +8,9 @@ echo "This program install Apache , MariaDB-server and PHP, along with all confi
 read -p "Do you want to continue? [Y/n] " warningAllert
 if [[ "$warningAllert" == "Y" ]]; then
     sleep 4
-    sudo apt update 
     echo "Start process..."
+    sudo apt update 
+    
     for package in "${allPackages[@]}"; do
         echo "----------------------------------------------------"
         #package installed or not
@@ -21,7 +22,7 @@ if [[ "$warningAllert" == "Y" ]]; then
     #creat info.php file
     if [[ ! -e "/var/www/html/info.php" ]]; then
         #print code -> than write to info.php -> at the end paste to null for clean terminal 
-        echo "<?php \nphpinfo(); \n?>" | sudo tee /var/www/html/info.php > /dev/null 
+        echo -e "<?php \nphpinfo(); \n?>" | sudo tee /var/www/html/info.php > /dev/null 
         
     fi
     sudo systemctl restart apache2
