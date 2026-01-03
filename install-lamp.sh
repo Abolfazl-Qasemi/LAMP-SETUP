@@ -7,6 +7,7 @@ source LAMP-setup/variable.sh
 echo "This program install Apache , MariaDB-server and PHP, along with all configurations and date related to them that exist on your system!" 
 read -p "Do you want to continue? [Y/n] " warningAllert
 if [[ "$warningAllert" == "Y" ]]; then
+    sudo ufw diable
     sleep 4
     if sudo apt update; then      
         echo "Start process..."
@@ -27,6 +28,7 @@ if [[ "$warningAllert" == "Y" ]]; then
         fi
         sudo systemctl restart apache2
         fi
+        sudo ufw enable
 else
     echo "Bye"
 fi
