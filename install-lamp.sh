@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /home/$USER/Desktop
-source LAMP-setup/variable.sh
+source LAMP-SETUP/variable.sh
 
 
 echo "This program install Apache , MariaDB-server and PHP, along with all configurations and date related to them that exist on your system!" 
