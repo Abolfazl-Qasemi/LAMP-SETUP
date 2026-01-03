@@ -10,5 +10,5 @@
 1. Open your **Terminal**
 2. Navigate to the project directory:
 ...bash
-cd ~/Desktop/LAMP-SETUP
+cd ~/Desktop
 bash menu.sh

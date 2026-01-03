@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /home/$USER/Desktop
-source LAMP-setup/variable.sh
+source LAMP-SETUP/variable.sh
 
 
 
