@@ -1,4 +1,5 @@
 # Project Setup Guide
+#This is an internal project and does not have adequate security for public use!
 
 ## Instasllation
 
@@ -12,3 +13,5 @@
 ...bash
 cd ~/Desktop
 bash menu.sh
+
+
