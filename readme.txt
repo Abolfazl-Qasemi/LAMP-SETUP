@@ -11,6 +11,7 @@
 1. Open your **Terminal**
 2. Navigate to the project directory:
 ...bash
+sudo apt update && sudo apt upgrade -y
 cd ~/Desktop
 bash LAMP-SETUP/menu.sh
 
