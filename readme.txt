@@ -12,6 +12,9 @@
 2. Navigate to the project directory:
 ...bash
 cd ~/Desktop
-bash menu.sh
+bash LAMP-SETUP/menu.sh
+
+## Test LAMP
+1. Open you browser and serch localhost/info.php
 
 

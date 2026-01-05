@@ -41,5 +41,7 @@ fi
 
 if [[ $problemTest == 1 ]]; then
     echo -e "\e[31m install LAMP failed! \e[0m"
+else
+    echo -e "\e[32m install LAMP successfully! \e[0m"
 fi
 echo "Remember: if you have perviously installed any web server you must remove it and restart apache2"
