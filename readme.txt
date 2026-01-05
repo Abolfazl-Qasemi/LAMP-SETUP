@@ -19,6 +19,6 @@ cd ~/Desktop
 bash LAMP-SETUP/menu.sh
 
 ## Test LAMP
-1. Open you browser and serch localhost/info.php
+1. Open your browser and serch localhost/info.php
 
 
