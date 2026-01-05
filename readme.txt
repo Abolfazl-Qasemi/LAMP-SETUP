@@ -1,3 +1,6 @@
+#LAMP-SETUP
+**Linux (Deian-based) only**
+
 # Project Setup Guide
 #This is an internal project and does not have adequate security for public use!
 
@@ -11,6 +14,7 @@
 1. Open your **Terminal**
 2. Navigate to the project directory:
 ...bash
+sudo apt update && sudo apt upgrade -y
 cd ~/Desktop
 bash LAMP-SETUP/menu.sh
 
