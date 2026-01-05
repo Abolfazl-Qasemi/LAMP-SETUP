@@ -1,3 +1,6 @@
+#LAMP-SETUP
+**Linux (Deian-based) only**
+
 # Project Setup Guide
 #This is an internal project and does not have adequate security for public use!
 
